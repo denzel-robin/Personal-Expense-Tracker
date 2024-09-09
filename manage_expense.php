@@ -32,7 +32,8 @@ $exp_fetched = mysqli_query($con, "SELECT * FROM expenses WHERE user_id = '$user
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Expense Manager - Dashboard<
+<title>Expense Manager - Dashboard</title>
+
 <link href="css/bootstrap.css" rel="stylesheet">
 
 <link href="css/style.css" rel="stylesheet">
