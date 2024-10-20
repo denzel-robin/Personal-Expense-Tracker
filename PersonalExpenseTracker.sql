@@ -1,14 +1,14 @@
 CREATE TABLE `expenses` (
-  `expense_id` int(20) NOT NULL,
-  `user_id` varchar(15) NOT NULL,
-  `expense` int(20) NOT NULL,
-  `expensedate` varchar(15) NOT NULL,
-  `expensecategory` varchar(50) NOT NULL
+  `expense_id` int NOT NULL,
+  `user_id` varchar NOT NULL,
+  `expense` int NOT NULL,
+  `expensedate` varchar NOT NULL,
+  `category_id` int NOT NULL
 );
 
 CREATE TABLE `expense_categories` (
-  `category_id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL
+  `category_id` int NOT NULL,
+  `category_name` varchar NOT NULL
 );
 
 INSERT INTO `expense_categories` (`category_id`, `category_name`) VALUES
@@ -22,11 +22,11 @@ INSERT INTO `expense_categories` (`category_id`, `category_name`) VALUES
 (8, 'Others');
 
 CREATE TABLE `users` (
-  `user_id` int(11) NOT NULL,
-  `firstname` varchar(50) NOT NULL,
-  `lastname` varchar(25) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `user_id` int NOT NULL,
+  `firstname` varchar NOT NULL,
+  `lastname` varchar NOT NULL,
+  `email` varchar NOT NULL,
+  `password` varchar NOT NULL
 );
 
 ALTER TABLE `expenses`
@@ -39,10 +39,10 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`user_id`);
 
 ALTER TABLE `expenses`
-  MODIFY `expense_id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `expense_id` int NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `expense_categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `category_id` int NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int NOT NULL AUTO_INCREMENT;
