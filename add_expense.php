@@ -5,12 +5,17 @@ $del = false;
 $expenseamount = "";
 $expensedate = date("Y-m-d");
 $expensecategory = "";
+$category_id = "";
 if (isset($_POST['add'])) {
     $expenseamount = $_POST['expenseamount'];
     $expensedate = $_POST['expensedate'];
     $expensecategory = $_POST['expensecategory'];
 
-    $expenses = "INSERT INTO expenses (user_id, expense,expensedate,expensecategory) VALUES ('$userid', '$expenseamount','$expensedate','$expensecategory')";
+    $find_id = "SELECT category_id FROM expense_categories WHERE category_name = '$expensecategory'";
+    $result = mysqli_query($con, $find_id) or die("Something Went Wrong!");
+    $category_row = mysqli_fetch_assoc($result);
+    $category_id = $category_row['category_id'];
+    $expenses = "INSERT INTO expenses (user_id, expense,expensedate,category_id) VALUES ('$userid', '$expenseamount','$expensedate','$category_id')";
     $result = mysqli_query($con, $expenses) or die("Something Went Wrong!");
     header('location: add_expense.php');
 }
@@ -21,7 +26,7 @@ if (isset($_POST['update'])) {
     $expensedate = $_POST['expensedate'];
     $expensecategory = $_POST['expensecategory'];
 
-    $sql = "UPDATE expenses SET expense='$expenseamount', expensedate='$expensedate', expensecategory='$expensecategory' WHERE user_id='$userid' AND expense_id='$id'";
+    $sql = "UPDATE expenses SET expense='$expenseamount', expensedate='$expensedate', category_id='$category_id' WHERE user_id='$userid' AND expense_id='$id'";
     if (mysqli_query($con, $sql)) {
         echo "Records were updated successfully.";
     } else {
