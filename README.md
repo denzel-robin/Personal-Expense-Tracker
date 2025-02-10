@@ -1,25 +1,25 @@
 # Personal Expense Tracker
 
-## 📌 Overview
+## Overview
 The **Personal Expense Tracker** is a web application that helps users manage their finances by tracking income and expenses. It provides a simple and intuitive interface to record transactions, view spending trends, and stay on top of personal finances.
 
-## 🚀 Features
-- ✅ **User Registration & Login** (Secure authentication)
-- 📊 **Expense & Income Tracking** (Categorize and manage transactions)
-- 🔎 **Filter & Search Transactions** (Easily find past records)
-- 📈 **Reports & Analytics** (Visual representation of spending trends)
-- 💾 **Data Persistence** (Stored securely in a MySQL database)
-- 🎨 **Responsive UI** (Built using Bootstrap)
+## Features
+- **User Registration & Login** (Secure authentication)
+- **Expense & Income Tracking** (Categorize and manage transactions)
+- **Filter & Search Transactions** (Easily find past records)
+- **Reports & Analytics** (Visual representation of spending trends)
+- **Data Persistence** (Stored securely in a MySQL database)
+- **Responsive UI** (Built using Bootstrap)
 
-## 🛠️ Tech Stack
+## Tech Stack
 - **Frontend:** HTML, CSS, Bootstrap, JavaScript
 - **Backend:** PHP
 - **Database:** MySQL
 - **Version Control:** Git
 
-## 📌 Setup Instructions
+## Setup Instructions
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/yourusername/Personal-Expense-Tracker.git
 cd Personal-Expense-Tracker
