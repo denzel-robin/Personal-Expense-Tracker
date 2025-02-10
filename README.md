@@ -13,13 +13,9 @@ The **Personal Expense Tracker** is a web application that helps users manage th
 
 ## 🛠️ Tech Stack
 - **Frontend:** HTML, CSS, Bootstrap, JavaScript
-- **Backend:** PHP (with MySQLi)
+- **Backend:** PHP
 - **Database:** MySQL
 - **Version Control:** Git
-
-## 📂 Project Structure
-
-
 
 ## 📌 Setup Instructions
 
@@ -28,7 +24,7 @@ The **Personal Expense Tracker** is a web application that helps users manage th
 git clone https://github.com/yourusername/Personal-Expense-Tracker.git
 cd Personal-Expense-Tracker
 ```
-#Ensure you have Apache, MySQL, and PHP installed. If using XAMPP or LAMP stack, start Apache and MySQL.
+**Ensure you have Apache, MySQL, and PHP installed. If using XAMPP or LAMP stack, start Apache and MySQL**
 
 ```bash
 mysql -u root -p
@@ -39,9 +35,9 @@ CREATE DATABASE dailyexpense;
 USE dailyexpense;
 ```
 
-#Run PersonalExpenseTracker.sql
+**Run PersonalExpenseTracker.sql**
 
-##Update config.php with your MySQL credentials
+**Update config.php with your MySQL credentials**
 
 ```bash
 sudo mv Personal-Expense-Tracker /srv/http/
@@ -50,4 +46,4 @@ sudo chmod -R 755 /srv/http/Personal-Expense-Tracker
 sudo systemctl restart httpd
 ```
 
-## Go to http://localhost/Personal-Expense-Tracker/
+**Go to http://localhost/Personal-Expense-Tracker/**
